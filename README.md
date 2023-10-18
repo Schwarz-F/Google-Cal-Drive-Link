@@ -23,11 +23,10 @@ Before you can use this script, you need to set up the following prerequisites:
     Python Dependencies:
 
     Ensure you have the required Python libraries installed. You can install them using pip:
-
-    css
+```python
 
     pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
-
+ ```
     Folder ID:
 
     You need to specify the parent folder ID in which the script will create subfolders on Google Drive. Update the parent_folder_id variable in the script with the correct ID.
@@ -35,23 +34,21 @@ Before you can use this script, you need to set up the following prerequisites:
 Usage
 
     Run the script:
-
-    python
-
+```python
     python main.py
+```
+The script will check for the existence of the token.json file, which stores your access and refresh tokens for Google APIs. If it doesn't exist or is no longer valid, it will initiate the authorization flow to generate a new one.
 
-    The script will check for the existence of the token.json file, which stores your access and refresh tokens for Google APIs. If it doesn't exist or is no longer valid, it will initiate the authorization flow to generate a new one.
+It fetches a list of subfolders in your Google Drive that are children of the specified parent folder.
 
-    It fetches a list of subfolders in your Google Drive that are children of the specified parent folder.
+It also retrieves a list of upcoming events from your Google Calendar.
 
-    It also retrieves a list of upcoming events from your Google Calendar.
+The script then compares the list of folders and events and performs various operations:
+It creates a folder for each event if it doesn't already exist in Google Drive.
+It renames folders to [Veraltet] if they don't match any events.
+If [Veraltet] folders already exist, it appends a number to them to create unique names.
 
-    The script then compares the list of folders and events and performs various operations:
-        It creates a folder for each event if it doesn't already exist in Google Drive.
-        It renames folders to [Veraltet] if they don't match any events.
-        If [Veraltet] folders already exist, it appends a number to them to create unique names.
-
-    The script runs in an infinite loop, checking for changes and updating folders as necessary.
+The script runs in an infinite loop, checking for changes and updating folders as necessary.
 
 Google API Scopes
 
