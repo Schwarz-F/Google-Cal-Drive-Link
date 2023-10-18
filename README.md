@@ -26,7 +26,7 @@ Google API Credentials:
     Ensure you have the required Python libraries installed. You can install them using pip:
     
 ```python
-    pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
+pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
 ```
 
     Folder ID:
