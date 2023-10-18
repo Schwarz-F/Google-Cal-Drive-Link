@@ -1,4 +1,4 @@
-#Google Calendar and Drive Integration
+Google Calendar and Drive Integration
 
 This Python script allows you to interact with the Google Calendar and Google Drive APIs. It performs various tasks such as creating folders, renaming them, and managing events in Google Calendar.
 Prerequisites
@@ -38,7 +38,7 @@ Usage
 
     python
 
-    python your_script.py
+    python main.py
 
     The script will check for the existence of the token.json file, which stores your access and refresh tokens for Google APIs. If it doesn't exist or is no longer valid, it will initiate the authorization flow to generate a new one.
 
