@@ -83,6 +83,5 @@ License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 Acknowledgments
-
-    This script is based on the Google API Python Quickstart tutorial.
-    The Google API libraries are used for accessing Google Calendar and Drive.
+This script is based on the Google API Python Quickstart tutorial.
+The Google API libraries are used for accessing Google Calendar and Drive.
