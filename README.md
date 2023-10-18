@@ -8,17 +8,18 @@ Before you can use this script, you need to set up the following prerequisites:
 Google API Credentials:
 ---------------
 
-To use the Google Calendar and Google Drive APIs, you need to create and download API credentials in the form of a JSON file. Here's how to do it:
-    - Go to the Google API Console.
-    - Create a new project or select an existing project.
-    - In the project, go to the "APIs & Services" > "Library" section.
-    - Search for "Google Calendar API" and "Google Drive API" and enable them for your project.
-    - After enabling the APIs, go to the "APIs & Services" > "Credentials" section.
-    - Click on "Create credentials" and select "OAuth client ID."
-    - Choose "Desktop app" as the application type.
-    - Give it a name, and then click "Create."
-    - In the newly created OAuth 2.0 Client ID, click "Download" to download the JSON file that contains your API credentials.
-    - Place this JSON file in the same directory as your Python script, and name it credentials.json. Make sure it's named exactly as specified to ensure the script can locate and use it.
+To use the Google Calendar and Google Drive APIs, you need to create and download API credentials in the form of a JSON file. 
+Here's how to do it:
+- Go to the Google API Console.
+- Create a new project or select an existing project.
+- In the project, go to the "APIs & Services" > "Library" section.
+- Search for "Google Calendar API" and "Google Drive API" and enable them for your project.
+- After enabling the APIs, go to the "APIs & Services" > "Credentials" section.
+- Click on "Create credentials" and select "OAuth client ID."
+- Choose "Desktop app" as the application type.
+- Give it a name, and then click "Create."
+- In the newly created OAuth 2.0 Client ID, click "Download" to download the JSON file that contains your API credentials.
+- Place this JSON file in the same directory as your Python script, and name it credentials.json. Make sure it's named exactly as specified to ensure the script can locate and use it.
 
 Python Dependencies:
 ---------------
