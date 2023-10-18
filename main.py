@@ -36,7 +36,7 @@ def main():
             token.write(creds.to_json())
 
     try:
-        parent_folder_id = '1RmQqpDC34EjdohRaWTushw4WWOk4YH0e'
+        parent_folder_id = 'dummy'
         calendar = build('calendar', 'v3', credentials=creds)
         drive = build('drive', 'v3', credentials=creds)
         query = f"'{parent_folder_id}' in parents and mimeType = 'application/vnd.google-apps.folder'"
@@ -80,7 +80,7 @@ def main():
             folders = [notag]
         for folder in folders:
             if events == []:
-                events = [{f'kind': 'calendar#event', 'etag': '"3392399979190000"', 'id': '3bcng1ij4ahfaj12jkt1mni7ht', 'status': 'confirmed', 'htmlLink': 'https://www.google.com/calendar/event?eid=M2JjbmcxaWo0YWhmYWoxMmprdDFtbmk3aHQgc2x6LmNiZy5lcmtAbQ', 'created': '2023-10-01T22:39:49.000Z', 'updated': '2023-10-01T22:39:49.595Z', 'summary': {notag}, 'creator': {'email': 'slz.cbg.erk@gmail.com', 'self': True}, 'organizer': {'email': 'slz.cbg.erk@gmail.com', 'self': True}, 'start': {'date': '2023-10-02'}, 'end': {'date': '2023-10-03'}, 'transparency': 'transparent', 'iCalUID': '3bcng1ij4ahfaj12jkt1mni7ht@google.com', 'sequence': 0, 'reminders': {'useDefault': False}, 'eventType': 'default'}]
+                events = [{f'kind': 'calendar#event', 'etag': '"1"', 'id': '1', 'status': 'confirmed', 'htmlLink': 'https://www.google.com/calendar/', 'created': '2023-10-01T22:39:49.000Z', 'updated': '2023-10-01T22:39:49.595Z', 'summary': {notag}, 'creator': {'email': 'noway@no.de', 'self': True}, 'organizer': {'email': 'noway@no.de, 'self': True}, 'start': {'date': '2023-10-02'}, 'end': {'date': '2023-10-03'}, 'transparency': 'transparent', 'iCalUID': 'sasasm', 'sequence': 0, 'reminders': {'useDefault': False}, 'eventType': 'default'}]
             for event in events:
                 start = event['start'].get('dateTime', event['start'].get('date'))
                 if not existiert(f"{event['summary']} {start}") and str(str(event['summary'])) != "{'"+notag+"'}":
