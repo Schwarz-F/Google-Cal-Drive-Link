@@ -5,7 +5,8 @@ Prerequisites
 
 Before you can use this script, you need to set up the following prerequisites:
 
-    Google API Credentials:
+Google API Credentials:
+---------------
 
     To use the Google Calendar and Google Drive APIs, you need to create and download API credentials in the form of a JSON file. Here's how to do it:
         Go to the Google API Console.
@@ -34,7 +35,7 @@ Before you can use this script, you need to set up the following prerequisites:
 
 Usage
 
-    Run the script:
+Run the script:
 ```python
     python main.py
 ```
