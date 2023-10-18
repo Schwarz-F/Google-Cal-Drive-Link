@@ -30,6 +30,7 @@ pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-
 
 Folder ID:
 ---------------
+
 You need to specify the parent folder ID in which the script will create subfolders on Google Drive. Update the parent_folder_id variable in the script with the correct ID.
 
 Usage:
