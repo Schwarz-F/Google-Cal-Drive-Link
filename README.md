@@ -31,7 +31,26 @@ pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-
 Folder ID:
 ---------------
 
-You need to specify the parent folder ID in which the script will create subfolders on Google Drive. Update the parent_folder_id variable in the script with the correct ID.
+You need to specify the parent folder ID in which the script will create subfolders on Google Drive. To find the ID of the parent folder, you can use the following code snippet:
+```python
+def get_folder_id_by_name(folder_name):
+    results = drive_service.files().list(q=f"name = '{folder_name}' and mimeType = 'application/vnd.google-apps.folder'").execute()
+    files = results.get('files', [])
+    if files:
+        return files[0]['id']
+    else:
+        return None
+
+folder_name = "Mein Ordner"
+folder_id = get_folder_id_by_name(folder_name)
+
+if folder_id:
+    print(f"The Folder '{folder_name}' has the ID: {folder_id}")
+else:
+    print(f"Der Ordner '{folder_name}' was not found.")
+```
+Replace "Mein Ordner" with the name of your desired parent folder. When you run this code, it will print the ID of the folder if found
+This snippet has to be implemented in main.py after you have connected to the Google API Services
 
 Usage:
 ---------------
