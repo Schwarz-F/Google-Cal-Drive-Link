@@ -49,7 +49,7 @@ folder_id = get_folder_id_by_name(folder_name)
 if folder_id:
     print(f"The Folder '{folder_name}' has the ID: {folder_id}")
 else:
-    print(f"Der Ordner '{folder_name}' was not found.")
+    print(f"The Folder '{folder_name}' was not found.")
 ```
 Replace "Mein Ordner" with the name of your desired parent folder. When you run this code, it will print the ID of the folder if found
 This snippet has to be implemented in main.py after you have connected to the Google API Services
